@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 vim.opt.swapfile = false
 vim.opt.mouse = ""
 vim.cmd("filetype plugin on")
+vim.wo.number = true
+vim.wo.relativenumber = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

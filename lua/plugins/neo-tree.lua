@@ -9,7 +9,7 @@ return {
   },
   
   config = function()
-    vim.keymap.set('n', '<leader>t', ':Neotree filesystem reveal left<CR>', {})
+    vim.keymap.set('n', '<leader>t', ':Neotree filesystem reveal left toggle=true<CR>', {})
     require('neo-tree').setup {
       filesystem = {
         filtered_items = {
