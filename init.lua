@@ -1,10 +1,18 @@
+-- Basic
 vim.g.mapleader = " "
-vim.opt.swapfile = false
-vim.opt.mouse = ""
+vim.opt.wrap = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.laststatus = 2
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+vim.opt.syntax = ON
 vim.cmd("filetype plugin on")
-vim.wo.number = true
-vim.wo.relativenumber = true
 
+-- Temp
+vim.opt.mouse = ""
+
+-- Install Lazy.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({

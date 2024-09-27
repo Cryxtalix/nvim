@@ -6,7 +6,7 @@ return {
     require("nvim-treesitter.configs").setup({
       ensure_installed = {
         "lua",
-        "nix",
+        "rust",
         "c",
         "python",
         "bash",
