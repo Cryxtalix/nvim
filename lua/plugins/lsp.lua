@@ -27,8 +27,21 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
+      vim.api.nvim_create_user_command(
+        "Definition",
+        function()
+          vim.lsp.buf.definition()
+        end,
+        {}
+      )
+      vim.api.nvim_create_user_command(
+        "CodeAction",
+        function()
+          vim.lsp.buf.code_action()
+        end,
+        {}
+      )
+
 
       lspconfig.bashls.setup({})
       lspconfig.lua_ls.setup({})
