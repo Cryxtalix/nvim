@@ -28,14 +28,14 @@ return {
       local lspconfig = require("lspconfig")
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.api.nvim_create_user_command(
-        "Definition",
+        "Goto",
         function()
           vim.lsp.buf.definition()
         end,
         {}
       )
       vim.api.nvim_create_user_command(
-        "CodeAction",
+        "Codeact",
         function()
           vim.lsp.buf.code_action()
         end,
