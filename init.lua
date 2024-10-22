@@ -9,9 +9,9 @@ vim.opt.incsearch = true
 vim.cmd("filetype plugin on")
 
 -- Temp
-vim.opt.mouse = ""
 vim.keymap.set({"", "i"}, "<up>", "<nop>")
 vim.keymap.set({"", "i"}, "<down>", "<nop>")
+vim.opt.mouse = ''
 
 -- Install Lazy.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
